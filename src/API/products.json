@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop Lenovo",
+        "price": 400,
+        "image": "https://www.lenovo.com/medias/lenovo-laptop-thinkpad-t580-front.png?context=bWFzdGVyfHJvb3R8MjQ2OTR8aW1hZ2UvcG5nfGhkNS9oZDYvOTYxMTE4OTcxNDk3NC5wbmd8ZWYzZDRmY2Q0MzI0M2NkYTI0ZTllYjM2ZmI4ZjFmZWRiMTMwYzQ3ZjNjNzk3NzZhNDhiN2I3MTQ5NzRjYjNmYg"
+    },
+    {
+        "id": 2,
+        "name": "Huawei P30",
+        "price": 650,
+        "image": "https://images-eu.ssl-images-amazon.com/images/I/31ObLBpMPSL.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Earpods",
+        "price": 20,
+        "image": "https://intermediary-i.linio.com/p/355c6bc715c862f9b8688ff3ff912804-product.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Bluetooth Earphones",
+        "price": 35,
+        "image": "https://www.picclickimg.com/d/l400/pict/202607784785_/For-Sony-MDR-XB650BT-Extra-Bass-Wireless-Headset.jpg"
+    },
+    {
+        "id": 5,
+        "name": "React T-Shirt",
+        "price": 10,
+        "image": "https://coder.clothing/images/stories/virtuemart/product/react-logo-tshirt-white6.jpg"
+    },
+    {
+        "id": 6,
+        "name": "USB Drive",
+        "price": 5,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61EUa0WpDlL._SX466_.jpg"
+    }
+]

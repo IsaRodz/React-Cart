@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Roboto:100,300,400,500');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, system-ui;
+  font-weight: 300;
+  background: #f9f9f9;
+  color: #333;
+  font-size: 1em;
+}
+
+code {
+  font-family: Inconsolata, monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Google Sans';
+  color: #212121;
+  font-weight: normal;
+  margin: .7em 0 .25em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.65em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+b {
+  font-weight: 500;
+}

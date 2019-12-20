@@ -1,0 +1,50 @@
+.toast {
+    position: fixed;
+    top: 70px;
+    right: 70px;
+    border-radius: 3px;
+    box-shadow: 0 2px 7px -3px rgba(0, 0, 0, 0.25);
+    background: #212121;
+    color: #fff;
+    padding: 1em 1.25em;
+    animation: fadeInUp 400ms;
+
+    &.fadeOutUp {
+        animation: fadeOutUp 500ms;
+    }
+
+    @media (max-width: 480px) {
+        top: unset;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutUp {
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@media (max-width: 480px) {
+    @keyframes fadeOutUp {
+        to {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+    }
+}

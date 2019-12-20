@@ -1,0 +1,59 @@
+$background: #2196F3;
+
+.btn {
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-family: Google Sans;
+    font-size: 1em;
+    font-weight: 300;
+    background: $background;
+    color: #ffffff;
+    padding: .7em 1.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 300ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background: $background + 20%;
+    }
+
+    &.raised {
+        box-shadow: 0 2px 4px rgba(#000, .2);
+
+        &:hover {
+            box-shadow: 0 2px 5px rgba(#000, .3);
+        }
+    }
+
+    &.flat {
+        background: rgba(#000, .01);
+        color: #212121;
+
+        &:hover {
+            background: rgba(#000, .05);
+        }
+    }
+
+    &.small {
+        font-size: .85em;
+        padding: .7em 1em;
+    }
+
+    .large {
+        padding: 1em 1.5em;
+    }
+
+    i,
+    svg {
+        color: inherit;
+        fill: inherit;
+        font-size: 1.15em;
+        width: 1.15em;
+        height: 1.15em;
+        margin: 0 5px;
+    }
+}

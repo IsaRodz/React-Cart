@@ -1,0 +1,40 @@
+nav {
+    background: #fff;
+    // background: #2196F3;
+    box-shadow: 0 2px 7px -1px rgba(0, 0, 0, .1);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 10vh;
+    }
+
+    .brand-logo {
+        color: #aaa;
+        font-family: Google Sans;
+        font-size: 1.75em;
+        display: flex;
+        align-items: center;
+        margin-left: -10px;
+
+        @media (max-width: 768px) {
+            font-size: calc(10px + 3vmin);
+        }
+
+        img,
+        svg {
+            height: 10vh;
+            width: 10vh;
+            animation: spin 60s infinite linear;
+            margin: 0;
+        }
+    }
+
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
