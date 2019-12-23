@@ -15,6 +15,16 @@ class App extends React.Component {
     cartTotal: 0
   }
 
+  toast = (text) => {
+
+    let toast = document.createElement('div');
+    toast.innerHTML = text;
+    toast.className = 'toast';
+    document.body.append(toast);
+    setTimeout(() => toast.classList.add('fadeOutUp'), 2500);
+    setTimeout(() => document.body.removeChild(toast), 3000);
+  }
+
   toggleCart = () => {
 
     let { cartIsActive } = this.state;
@@ -33,7 +43,7 @@ class App extends React.Component {
     // Sumar al total el precio del item
     cartTotal = cartTotal + price;
     // Actualizar el estado
-    this.setState({ cartItems, cartTotal });
+    this.setState({ cartItems, cartTotal }, this.toast('Added'));
   }
 
   removeCartItem = (index, price) => {
@@ -44,7 +54,7 @@ class App extends React.Component {
     // Quitar el item del array
     cartItems.splice(index, 1);
     // Actualizar el estado
-    this.setState({ cartItems, cartTotal });
+    this.setState({ cartItems, cartTotal }, this.toast('Removed'));
   }
 
   render() {
