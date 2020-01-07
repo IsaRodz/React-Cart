@@ -12,7 +12,8 @@ class App extends React.Component {
     cartIsActive: false,
     cartItems: [],
     products: products,
-    cartTotal: 0
+    cartTotal: 0,
+    experimentalCart: localStorage.getItem('cart'),
   }
 
   toast = (text) => {
