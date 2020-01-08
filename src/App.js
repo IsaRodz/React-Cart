@@ -112,43 +112,24 @@ class App extends React.Component {
   }
 
   render() {
-    let {
-      cartIsActive,
-      cartItems,
-      cartTotal,
-      products
-    } = this.state;
-    return ( <
-      div className = "App" >
-      <
-      Nav toggleCart = {
-        this.toggleCart
-      }
-      cartIsActive = {
-        cartIsActive
-      }
-      cartItems = {
-        cartItems
-      }
-      cartTotal = {
-        cartTotal
-      }
-      removeItem = {
-        this.removeCartItem.bind(this)
-      }
-      /> <
-      div className = "container" >
-      <
-      h1 > Products < /h1> <
-      ProductGrid addItemToCart = {
-        this.addItemToCart
-      }
-      products = {
-        products
-      }
-      /> < /
-      div > <
-      /div>
+    let { cartIsActive, cartItems, cartTotal, products } = this.state;
+    return (
+      <div className="App" >
+        <Nav
+          toggleCart={this.toggleCart}
+          cartIsActive={cartIsActive}
+          cartItems={cartItems}
+          cartTotal={cartTotal}
+          removeItem={this.removeCartItem.bind(this)}
+        />
+        <div className="container" >
+          <h1> Products </h1>
+          <ProductGrid
+            addItemToCart={this.addItemToCart}
+            products={products}
+          />
+        </div>
+      </div>
     );
   }
 }
