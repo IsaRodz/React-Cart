@@ -13,7 +13,7 @@ class App extends React.Component {
     cartItems: [],
     products: products,
     cartTotal: 0,
-    experimentalCart: localStorage.getItem('cart'),
+    experimentalCart: [],
   }
 
   toast = (text) => {
@@ -45,6 +45,10 @@ class App extends React.Component {
     cartTotal = cartTotal + price;
     // Actualizar el estado
     this.setState({ cartItems, cartTotal }, this.toast('Added'));
+
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('cartTotal', cartTotal);
+
   }
 
   removeCartItem = (index, price) => {
@@ -56,6 +60,9 @@ class App extends React.Component {
     cartItems.splice(index, 1);
     // Actualizar el estado
     this.setState({ cartItems, cartTotal }, this.toast('Removed'));
+
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('cartTotal', cartTotal);
   }
 
   render() {
