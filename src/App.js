@@ -53,24 +53,17 @@ class App extends React.Component {
 
   toggleCart = () => {
 
-    let {
-      cartIsActive
-    } = this.state;
+    let { cartIsActive } = this.state;
     // TOGGLE
     cartIsActive = !cartIsActive;
     // UPDATE
-    this.setState({
-      cartIsActive
-    })
+    this.setState({ cartIsActive });
 
   }
 
   addItemToCart = (name, price) => {
     // Obtener items y total del state
-    let {
-      cartItems,
-      cartTotal
-    } = this.state;
+    let { cartItems, cartTotal } = this.state;
     // Añadir item al array
     cartItems.push({
       name: name,
@@ -92,10 +85,7 @@ class App extends React.Component {
 
   removeCartItem = (index, price) => {
     // Obtener items y total del state
-    let {
-      cartItems,
-      cartTotal
-    } = this.state;
+    let { cartItems, cartTotal } = this.state;
     // Restar al total el precio del item
     cartTotal = cartTotal - price;
     // Quitar el item del array
