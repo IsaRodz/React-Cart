@@ -25,7 +25,7 @@ class App extends React.Component {
     // consuming from the localstorage
     let stCartItems = localStorage.getItem('cartItems'),
       stCartTotal = localStorage.getItem('cartTotal');
-    console.log(stCartItems, stCartTotal);
+    // console.log(stCartItems, stCartTotal);
 
     //  Then if data is ok set data to the state
     if (stCartItems === null) {
@@ -39,7 +39,7 @@ class App extends React.Component {
         cartItems: JSON.parse(stCartItems)
       });
     }
-    console.log(this.state.cartItems)
+    // console.log(this.state.cartItems)
   }
 
   toast = (text) => {
