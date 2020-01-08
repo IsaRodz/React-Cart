@@ -8,16 +8,33 @@ import products from './API/products.json';
 
 class App extends React.Component {
 
-  state = {
-    cartIsActive: false,
-    cartItems: [],
-    products: products,
-    cartTotal: 0,
-    experimentalCart: [],
+  constructor() {
+    super();
+
+    this.state = {
+      cartIsActive: false,
+      cartItems: [],
+      products: products,
+      cartTotal: 0,
+      experimentalCart: [],
+    }
+  }
+
+  componentDidMount() {
+    let stCartItems = localStorage.getItem('cartItems'),
+      stCartTotal = localStorage.getItem('cartTotal');
+    console.log(stCartItems, stCartTotal);
+
+
+    if (stCartItems === null) {
+      this.setState({ cartTotal: 0, cartItems: [] });
+    } else {
+      this.setState({ cartTotal: Number(stCartTotal), cartItems: JSON.parse(stCartItems) });
+    }
+    console.log(this.state.cartItems)
   }
 
   toast = (text) => {
-
     let toast = document.createElement('div');
     toast.innerHTML = text;
     toast.className = 'toast';
@@ -46,6 +63,7 @@ class App extends React.Component {
     // Actualizar el estado
     this.setState({ cartItems, cartTotal }, this.toast('Added'));
 
+    // Setting to the localStorage
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     localStorage.setItem('cartTotal', cartTotal);
 
@@ -61,6 +79,7 @@ class App extends React.Component {
     // Actualizar el estado
     this.setState({ cartItems, cartTotal }, this.toast('Removed'));
 
+    // Setting to the localStorage
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     localStorage.setItem('cartTotal', cartTotal);
   }
