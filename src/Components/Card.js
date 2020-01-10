@@ -21,7 +21,7 @@ export default class Card extends Component {
                     <p><b>$<span>{price}</span> </b></p>
                     <button onClick={this.handleClick.bind(this, name, price)}
                         className="btn small">
-                        add to cart
+                        Add to cart
                         </button>
                 </div>
             </div >

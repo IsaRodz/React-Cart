@@ -11,7 +11,7 @@ export default class Cart extends Component {
         let { cartItems, cartTotal, cartIsActive } = this.props;
 
         return (
-            <div className={cartIsActive ? 'active' : ' cart'} id="cart">
+            <div className={cartIsActive ? 'cart active' : 'cart'}>
                 <h2>Cart: ${cartTotal}</h2>
                 <h5>Cart Items List</h5>
                 <ul className="cart-item-list">

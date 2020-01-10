@@ -31,8 +31,8 @@ export default class Nav extends Component {
                         </svg>
                     </button>
                 </div>
-                <div onClick={this.changeSomething} id="overlay"
-                    className={cartIsActive ? 'active' : ''}></div>
+                <div onClick={this.changeSomething}
+                    className={cartIsActive ? 'overlay active' : 'overlay'}></div>
                 <Cart
                     cartIsActive={cartIsActive}
                     cartItems={cartItems}

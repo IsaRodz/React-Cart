@@ -6,7 +6,7 @@
     margin: auto;
 }
 
-#overlay {
+.overlay {
     &:not(.active) {
         display: none;
     }

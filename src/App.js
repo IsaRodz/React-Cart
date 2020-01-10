@@ -4,6 +4,9 @@ import './App.scss';
 import './Components/scss/Button.scss';
 import Nav from './Components/Nav';
 import ProductGrid from './Components/ProductGrid';
+import Toast from './Components/Toast';
+
+
 import products from './API/products.json';
 
 class App extends React.Component {
@@ -16,7 +19,6 @@ class App extends React.Component {
       cartItems: [],
       products: products,
       cartTotal: 0,
-      experimentalCart: [],
     }
   }
 
@@ -75,7 +77,7 @@ class App extends React.Component {
     this.setState({
       cartItems,
       cartTotal
-    }, this.toast('Added'));
+    }, this.toast(`Added`));
 
     // Setting to the localStorage
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -94,7 +96,7 @@ class App extends React.Component {
     this.setState({
       cartItems,
       cartTotal
-    }, this.toast('Removed'));
+    }, this.toast(`Removed`));
 
     // Setting to the localStorage
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
