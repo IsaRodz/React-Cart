@@ -3,13 +3,13 @@
     border-radius: 4px;
     box-shadow: 0 2px 7px rgba(#000, .1);
     overflow: hidden;
+    display: grid;
 
     .image {
         height: 150px;
-        display: flex;
+        display: grid;
 
-        align-items: center;
-        justify-content: center;
+        place-items: center;
 
         img {
             position: relative;
@@ -21,6 +21,10 @@
 
     .content {
         padding: 16px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
 
         p {
             margin: .5em 0;

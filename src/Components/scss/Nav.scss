@@ -8,6 +8,16 @@ nav {
         align-items: center;
         justify-content: space-between;
         height: 10vh;
+
+        button {
+            >span {
+                margin-right: 5px;
+
+                @media(max-width: 380px) {
+                    display: none;
+                }
+            }
+        }
     }
 
     .brand-logo {

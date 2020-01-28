@@ -23,7 +23,7 @@ export default class Nav extends Component {
                         My React Store
                     </div>
                     <button className="btn flat small" onClick={this.changeSomething}>
-                        Total: ${cartTotal}
+                        <span>Total: </span>  ${cartTotal}
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <ellipse transform="rotate(-1.057 159.995 423.97) scale(.99997)" cx="160" cy="424" rx="24" ry="24" />
                             <ellipse transform="matrix(.02382 -.9997 .9997 .02382 -48.51 798.282)" cx="384.5" cy="424" rx="24" ry="24" />

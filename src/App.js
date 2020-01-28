@@ -1,10 +1,8 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.scss';
 import './Components/scss/Button.scss';
 import Nav from './Components/Nav';
 import ProductGrid from './Components/ProductGrid';
-import Toast from './Components/Toast';
 
 
 import products from './API/products.json';
